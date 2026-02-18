@@ -3,7 +3,7 @@ import model.*;
 
 class Resolver(val players: List<Player>): IResolver {
     override fun getCountWithoutAgency(): Int {
-        return players.count { it.agency.isNotEmpty() };
+        return players.count { it.agency.isEmpty() };
     }
 
     override fun getBestScorerDefender(): Pair<String, Int> {
